@@ -565,9 +565,9 @@ PageController.prototype.prepareDataUrl = function (url) {
     var gid = url.indexOf('gid=') >= 0 ? url.substring(url.indexOf('gid=') + 4) : 0
 
     // the structure should be: "https://docs.google.com/spreadsheets/d/[Doc_ID]/export?gid=[gid]&format=csv
-    url = url.substring(0, url.indexOf('/', url.indexOf('spreadsheets/d/') + 15)) + '/export'
+    url = url.substring(0, url.indexOf('/', url.indexOf('spreadsheets/d/') + 15)) + '/pub'
     url = Utils.addParamToUrl(url, 'gid', gid)
-    url = Utils.addParamToUrl(url, 'format', 'csv')
+    url = Utils.addParamToUrl(url, 'output', 'csv')
     return url
   }
 
